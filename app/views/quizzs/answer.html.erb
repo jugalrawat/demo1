@@ -1,0 +1,28 @@
+<p>
+  <b>Question:</b>
+  <%=h @quizz.question %>
+</p>
+<p>
+  <b>1:</b>
+  <%=h @quizz.ans1 %>
+</p>
+<p>
+  <b>2:</b>
+  <%=h @quizz.ans2 %>
+</p>
+<p>
+  <b>3:</b>
+  <%=h @quizz.ans3 %>
+</p>
+<p>
+  <b>4:</b>
+  <%=h @quizz.ans4 %>
+</p>
+<%= form_tag(:action => "check",:id => @quizz.id) do %>
+    <p>
+      <b>The correct answer is number: </b>
+      <%= text_field_tag(:q) %>
+    </p>
+    <p><%= button_to "Check", {:controller => "quizzs", :action => "check" }%></P>
+<% end %>
+<%= link_to 'Back', {:controller => "quizzs", :action => "answering"} %>

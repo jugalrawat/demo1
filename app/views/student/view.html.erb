@@ -1,0 +1,13 @@
+<h2>Which question do you want to answer?</h2>
+<table>
+  <tr>
+    <th>Question</th>
+  </tr>
+  <% @stu.each do |quizz| %>
+      <tr>
+        <td><%=h quizz.question %></td>
+        <td><%= link_to 'Show', 'students/1' %></td>
+      </tr>
+  <% end %>
+</table>
+<br />

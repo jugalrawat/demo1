@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Which question do you want to answer?</h2>
+<table width="100%" border="1">
+  <tr>
+    <th>Question</th>
+  </tr>
+  <% @quizzs.each do |quizz| %>
+      <tr>
+        <td><%=h quizz.question %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= link_to 'Answer this', :controller => "quizzs", :action => "answer",:id=>quizz.id%></td>
+      </tr>
+  <% end %>
+</table>
+<br />
