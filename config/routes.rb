@@ -5,6 +5,7 @@ Demo::Application.routes.draw do
   get "/quizz/answering" =>  "quizzs#answering"
   get "/quizz/answer/:id" => "quizzs#answer"
   match "/quizz/check/:id" => "quizzs#check", :via => :post
+  match "/quizz/complete/:id" => "quizzs#complete", :via => :post
 
   #match "/quizz/answering" => "quizzs#answering", :via => :post
   #get '/starttest',  :to => 'student#view'

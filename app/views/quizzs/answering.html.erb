@@ -1,13 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-<h2>Which question do you want to answer?</h2>
-<table width="100%" border="1">
+<br />
+<h2 style="color: #607e00">Which question do you want to answer?</h2>
+<br />
+<table class="tsc_table_s8" width="100%">
+  <thead>
   <tr>
-    <th>Question</th>
+    <th scope="col">Question</th>
+    <th scope="col">...</th>
   </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <th scope="row"></th>
+    <td colspan="7"></td>
+  </tr>
+  </tfoot>
   <% @quizzs.each do |quizz| %>
       <tr>
-        <td><%=h quizz.question %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th scope="row"><%=h quizz.question %></th>
         <td><%= link_to 'Answer this', :controller => "quizzs", :action => "answer",:id=>quizz.id%></td>
       </tr>
   <% end %>

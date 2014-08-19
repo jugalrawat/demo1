@@ -90,6 +90,21 @@ class QuizzsController < ApplicationController
     end
   end
 
+  def complete
+    @quizz = Quizz.find(params[:id])
+      respond_to do |format|
+        if params[:ans1_check_box].to_i==@quizz.correctans
+          flash[:notice] = "Congratulation. You gave the correct answer to the question: " + @quizz.question + ""
+          format.html { redirect_to({:controller => "quizzs", :action => "answering" } ) }
+          format.xml { head :ok }
+        else
+          flash[:notice] = "I am sorry but that is not the right answer to the question: " + @quizz.question + ""
+          format.html { redirect_to({:controller => "quizzs", :action => "answering" } ) }
+          format.xml { head :ok }
+        end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quizz

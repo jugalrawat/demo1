@@ -1,24 +1,29 @@
-<h1>Listing quizzs</h1>
-
-<table width="100%" border="1">
+<h1 style="color: #607e00">Listing quizzs</h1>
+<br />
+<table class="tsc_table_s8" width="100%">
   <thead>
     <tr>
-      <th>Question</th>
-      <th>Ans1</th>
-      <th>Ans2</th>
-      <th>Ans3</th>
-      <th>Ans4</th>
-      <th>Correctans</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th scope="col">Question</th>
+      <th scope="col">Ans1</th>
+      <th scope="col">Ans2</th>
+      <th scope="col">Ans3</th>
+      <th scope="col">Ans4</th>
+      <th scope="col">Correctans</th>
+      <th scope="col">...</th>
+      <th scope="col">...</th>
+      <th scope="col">...</th>
     </tr>
   </thead>
+  <tfoot>
+  <tr>
+    <th scope="row"></th>
+    <td colspan="7"></td>
+  </tr>
+  </tfoot>
 
-  <tbody>
     <% @quizzs.each do |quizz| %>
       <tr>
-        <td><%= quizz.question %></td>
+        <th scope="row"><%= quizz.question %></th>
         <td><%= quizz.ans1 %></td>
         <td><%= quizz.ans2 %></td>
         <td><%= quizz.ans3 %></td>
@@ -29,7 +34,7 @@
         <td><%= link_to 'Destroy', quizz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
+
 </table>
 
 <br>

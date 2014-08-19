@@ -1,23 +1,9 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #4d5051;
     background-color: #d6d6d6;
-    background-image: url(../images/top-rept.jpg);
+    background-image: url(top-rept.jpg);
     background-repeat: repeat-x;
     background-position: left top;
     margin: 0px;
@@ -31,11 +17,11 @@ a {
     text-decoration: underline;
 }
 a:hover {
-    color: #072FCF;
+    color: #607e00;
     text-decoration: none;
 }
 .page-in {
-    background-image: url(../images/bottom-rept.jpg);
+    background-image: url(bottom-rept.jpg);
     background-repeat: repeat-x;
     background-position: left bottom;
     width: 100%;
@@ -69,7 +55,7 @@ a:hover {
     color: #000000;
 }
 .header-bottom {
-    background-image: url(../images/header.jpg);
+    background-image: url(header.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     width: 1000px;
@@ -85,7 +71,7 @@ a:hover {
     margin-left: 27px;
 }
 .topmenu {
-    background-image: url(../images/menu-bg.jpg);
+    background-image: url(menu-bg.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     width: 1000px;
@@ -98,7 +84,7 @@ a:hover {
     list-style-type: none;
 }
 .topmenu ul li {
-    background-image: url(../images/devider.jpg);
+    background-image: url(devider.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     height: 74px;
@@ -125,18 +111,18 @@ a:hover {
     cursor: pointer;
 }
 .topmenu ul li a:hover {
-    background-image: url(../images/menu-left.jpg);
+    background-image: url(menu-left.jpg);
     background-repeat: no-repeat;
     background-position: left top;
 }
 .topmenu ul li a:hover span {
-    background-image: url(../images/menu-right.jpg);
+    background-image: url(menu-right.jpg);
     background-repeat: no-repeat;
     background-position: right top;
 }
 .content {
     background-color: #FFFFFF;
-    background-image: url(../images/body-top.jpg);
+    background-image: url(body-top.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     width: 952px;
@@ -144,15 +130,15 @@ a:hover {
     padding: 30px 24px 0px 24px;
 }
 .content-left {
-    background-image: url(../images/vline.jpg);
+    background-image: url(vline.jpg);
     background-repeat: repeat-y;
     background-position: right top;
-    width: 621px;
+    width: 1px;
     float: left;
     padding-right: 21px;
 }
 .row1 {
-    width: 621px;
+    width: 950px;
     float: left;
 }
 .title {
@@ -173,14 +159,14 @@ a:hover {
 ul.list1 {
     margin-top: 5px;
     margin-left: 25px;
-    list-style-image: url(../images/bullet.jpg);
+    list-style-image: url(bullet.jpg);
 }
 ul.list1 li {
     padding-top: 3px;
     padding-bottom: 3px;
 }
 .row2 {
-    background-image: url(../images/section-bg.jpg);
+    background-image: url(section-bg.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     width: 591px;
@@ -203,7 +189,7 @@ a.more {
     line-height: 30px;
     color: #282828;
     text-decoration: none;
-    background-image: url(../images/more-btn.jpg);
+    background-image: url(more-btn.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     text-align: center;
@@ -228,7 +214,7 @@ a.more:hover {
     font-size: 18px;
     line-height: 50px;
     color: #FFFFFF;
-    background-image: url(../images/sidebar1.jpg);
+    background-image: url(sidebar1.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     height: 50px;
@@ -240,7 +226,7 @@ a.more:hover {
     list-style-type: none;
 }
 .mainmenu ul li {
-    background-image: url(../images/bullet.jpg);
+    background-image: url(bullet.jpg);
     background-repeat: no-repeat;
     background-position: left center;
     padding-top: 3px;
@@ -260,7 +246,7 @@ a.more:hover {
     font-size: 18px;
     line-height: 50px;
     color: #FFFFFF;
-    background-image: url(../images/sidebar2.jpg);
+    background-image: url(sidebar2.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     height: 50px;
@@ -281,7 +267,7 @@ a.more:hover {
 }
 .footer {
     line-height: 69px;
-    background-image: url(../images/footer.jpg);
+    background-image: url(footer.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     width: 952px;
@@ -322,3 +308,51 @@ a.more:hover {
     text-decoration: underline;
 }
 
+.tsc_table_s8 {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+.tsc_table_s8 thead th {
+    background-color: #a3c159;
+    border-right: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    height: 25px;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.tsc_table_s8 tfoot {
+    border-top: 6px solid #e9f7f6;
+    color: #1ba6b2;
+    font-size: 1.2em;
+    margin-top: 6px;
+    padding: 2px;
+    text-transform: uppercase;
+}
+.tsc_table_s8 tbody tr {
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+.tsc_table_s8 tbody th {
+    padding: 2px;
+    text-align: left;
+}
+
+.tsc_table_s8 tbody td {
+    color: #414141;
+    padding: 5px;
+    text-align: left;
+}
+.tsc_table_s8 tbody td a, .tsc_table_s8 tbody th a {
+    color: #6c8c37;
+    display: block;
+    font-weight: normal;
+    padding-left: 15px;
+    text-decoration: none;
+}
+ * {
+    outline: medium none;
+}

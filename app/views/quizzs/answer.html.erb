@@ -1,28 +1,38 @@
+<div>
 <p>
   <b>Question:</b>
   <%=h @quizz.question %>
 </p>
+  <br />
 <p>
   <b>1:</b>
-  <%=h @quizz.ans1 %>
+  <!--  <%= check_box_tag "ans1_check_box","1"%><%= @quizz.ans1%>-->
+  <!-- Comments -->
+   <%=h @quizz.ans1 %>
 </p>
 <p>
   <b>2:</b>
+  <!-- <%= check_box_tag "ans2_check_box","2"%><%= @quizz.ans2%>-->
   <%=h @quizz.ans2 %>
 </p>
 <p>
   <b>3:</b>
-  <%=h @quizz.ans3 %>
+  <!-- <%= check_box_tag "ans3_check_box","3"%><%= @quizz.ans3%>-->
+   <%=h @quizz.ans3 %>
 </p>
 <p>
   <b>4:</b>
+  <!-- <%= check_box_tag "ans4_check_box","4"%><%= @quizz.ans4%>-->
   <%=h @quizz.ans4 %>
 </p>
-<%= form_tag(:action => "check",:id => @quizz.id) do %>
+ <%= form_tag(:action => "check",:id => @quizz.id) do %>
     <p>
       <b>The correct answer is number: </b>
       <%= text_field_tag(:q) %>
     </p>
+      <br />
     <p><%= button_to "Check", {:controller => "quizzs", :action => "check" }%></P>
 <% end %>
+  <br />
 <%= link_to 'Back', {:controller => "quizzs", :action => "answering"} %>
+</div>
