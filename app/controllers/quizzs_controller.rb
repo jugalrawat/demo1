@@ -1,6 +1,6 @@
 class QuizzsController < ApplicationController
   before_action :set_quizz, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate, :except => [:home]
+  before_filter :authenticate, :except => [:answer,:answering,:check]
 
   # GET /quizzs
   # GET /quizzs.json
